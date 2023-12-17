@@ -1,13 +1,16 @@
-Goal
+This is my Course Assignment for Front-end Frameworks.
+
+# Goal
 
 To apply knowledge of React to build an eCom store.
-Brief
+
+## Brief
 
 The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
 
 You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
 
-You are tasked with build out the following pages for an eCom store:
+## You are tasked with build out the following pages for an eCom store:
 
     Homepage
     Individual product page
@@ -38,7 +41,8 @@ Your design should be responsive. You are welcome to use a CSS Framework, howeve
 You are not required to use TypeScript.
 
 Your code is expected to be clean and well-formatted.
-Process
+
+## Process
 
     Create a new CRA app.
     Create a Header that has a Nav.
@@ -80,7 +84,7 @@ Process
     console.log the data from the form once validation requirements are met.
     Once your project is done, deploy it to Netlify.
 
-Delivery
+## Delivery
 
 Deploy your website on Netlify.
 
