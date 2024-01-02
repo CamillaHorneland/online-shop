@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
@@ -6,17 +5,17 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <NavLink to="/" exact activeClassName="active">
+          <NavLink to="/" activeclassname="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/cart" activeClassName="active">
+          <NavLink to="/cart" activeclassname="active">
             Cart
           </NavLink>
         </li>
         <li>
-          <NavLink to="/checkout" activeClassName="active">
+          <NavLink to="/checkout" activeclassname="active">
             Checkout
           </NavLink>
         </li>

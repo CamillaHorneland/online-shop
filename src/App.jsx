@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import './App.css'
+import './index.css'
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
