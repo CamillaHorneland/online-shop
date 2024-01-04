@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { url } from "../../constants/api";
 import { useQuery } from "@tanstack/react-query";
-
+/test/
 async function getProduct(id) {
 	const response = await fetch(`${url}/${id}`);
 
