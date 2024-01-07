@@ -1,0 +1,14 @@
+.footerContainer {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.copyrightText,
+.contactLink a {
+    color: white;
+    padding-top: 30px;
+    margin: 10px;
+}
