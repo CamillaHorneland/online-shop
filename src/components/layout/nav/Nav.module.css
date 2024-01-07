@@ -43,6 +43,7 @@ ul {
         cursor: pointer;
         margin: 15px;
         color: white;
+        font-size: 40px;
     }
 
     .navList {
@@ -60,6 +61,11 @@ ul {
     
     .navList li {
         margin: 15px;
+    }
+
+    .logo img {
+        max-width: 50%;
+            
     }
         
 }
