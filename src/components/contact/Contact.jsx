@@ -115,7 +115,7 @@ function ContactPage() {
         />
 
         <label htmlFor="body" className={styles.formLabel}>
-          Body
+          Your message
         </label>
         <textarea
           name="body"

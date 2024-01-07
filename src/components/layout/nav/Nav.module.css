@@ -26,3 +26,40 @@ ul {
     cursor: pointer;
     font-size: large;
 }
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .logo {
+        margin: 15px;
+    }
+
+    .hamburgerIcon {
+        display: block;
+        cursor: pointer;
+        margin: 15px;
+        color: white;
+    }
+
+    .navList {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navList.show {
+            display: flex;
+        }
+    
+    .navList li {
+        margin: 15px;
+    }
+        
+}
