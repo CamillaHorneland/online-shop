@@ -4,7 +4,9 @@ function HomePage() {
 	return (
 		<>
 			<h1>Products</h1>
-			<ProductList/>
+			<div className="flex-card">
+				<ProductList/>
+			</div>
 		</>
 	);
 }

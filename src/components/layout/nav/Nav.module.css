@@ -1,0 +1,28 @@
+.nav {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    align-items: left;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: 30px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    margin-top: 100px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(253, 250, 250);
+    margin: 25px;
+    cursor: pointer;
+    font-size: large;
+}
