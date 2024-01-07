@@ -27,6 +27,11 @@
     text-align: center;
 
   }
+
+  a:hover {
+      color: #6a6a6c;
+  }
+ 
 }
 
 h1 {
