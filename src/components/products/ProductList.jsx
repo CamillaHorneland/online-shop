@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { url } from "../../constants/api";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 async function getProducts() {
 	const response = await fetch(url);
@@ -13,6 +13,8 @@ async function getProducts() {
 }
 
 function ProductsList() {
+	const navigate = useNavigate();
+	
 	const {
 		isPending,
 		error,
@@ -32,10 +34,13 @@ function ProductsList() {
 		<>
 			{products?.map((product) => {
 				return (
-					<div key={product.id} className="mb-5">
+					<div key={product.id} className="card">
 						<h2>{product.title}</h2>
+						<img src={product.imageUrl} alt={product.title} />
 						<p>{product.description}</p>
-						<Link to={`/product/${product.id}`}>View Product</Link>
+						<button className="btn-card" onClick={() => navigate(`/product/${product.id}`)}>
+							<a>See product..</a>
+                        </button>
 					</div>
 				);
 			})}

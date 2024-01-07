@@ -1,6 +1,4 @@
-// import { useState } from 'react'
-import './index.css'
-import styled from 'styled-components';
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
@@ -9,7 +7,9 @@ import CartPage from "./pages/CartPage";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactPage from "./pages/ContactPage";
-import Layout from "./components/layout/layout";
+import Layout from "./components/layout/Layout";
+
+
 
 function App() {
     return (
