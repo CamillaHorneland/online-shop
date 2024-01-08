@@ -15,7 +15,7 @@ const CartIcon = ({children}) => {
     const { quantity, addToCart } = useContext(CartContext);
 
     return (
-        <span className="cart">
+        <span className="cartIcon">
             { children }
             <CiShoppingCart style={{fontSize: '30px'}} />
             <i>{quantity}</i>

@@ -7,25 +7,55 @@ li {
 .cartItem {
     display: flex;
     justify-content: space-between;
+    margin: 40px;
     align-items: center;
-    margin-bottom: 10px;
-    border-bottom: 2px solid rgb(231, 221, 221);;
+    border-bottom: 2px solid rgb(231, 221, 221);
     padding-bottom: 10px;
 }
 
-.product-info {
-    flex: 1;
+.cartList {
+    margin: 30px;
 }
 
-.control-wrapper .quantityControls span {
-    margin-right: 10px;
+.productInfo {
+    margin: 40px;
 }
 
-.control-wrapper .quantityControls button {
-    margin-left: 10px;
+.quantityControls {
+    margin: 40px;
 }
 
-.total-info {
-    margin-top: 20px;
+.quantityControls span {
+    margin-right: 52px !important;
+    margin-bottom: 20px;
 }
+
+.quantityControls button {
+    margin-right: 25px;
+}
+
+@media (max-width: 800px) {
+
+    .cartItem {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartItem,
+    .productInfo,
+    .quantityControls {
+        margin: 20px;
+    }
+
+    .quantityControls span {
+        margin-right: 0 !important;
+        margin: 10px;
+    }
+
+    .quantityControls button {
+        margin-right: 0 !important;
+    }
+}
+
+
 

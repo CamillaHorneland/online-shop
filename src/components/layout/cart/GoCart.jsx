@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../../../hooks/CartProvider';
-import styles from './GoCart.module.css';
+import styles from "./GoCart.module.css"
 
 function GoCart() {
   const { quantity, addToCart, removeFromCart, getCartProducts } = useContext(CartContext);
