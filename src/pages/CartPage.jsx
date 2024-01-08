@@ -1,9 +1,13 @@
+import React from 'react';
+import GoCart from '../components/layout/cart/GoCart';
+
 function CartPage() {
-	return (
-		<>
-			<h1>Cart</h1>
-		</>
-	);
+  return (
+    <>
+	 <h1>Cart</h1>
+      <GoCart/>
+    </>
+  );
 }
 
 export default CartPage;

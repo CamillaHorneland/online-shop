@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { url } from "../../constants/api";
 import { useQuery } from "@tanstack/react-query";
+import { CartContext } from "../../hooks/CartProvider";
 import styles from "./ProductDetail.module.css"; 
+import { useState, useContext } from 'react';
 
 async function getProduct(id) {
     const response = await fetch(`${url}/${id}`);
@@ -14,6 +16,8 @@ async function getProduct(id) {
 }
 
 function ProductDetail() {
+    const { quantity, addToCart } = useContext(CartContext);
+    
     const { id } = useParams();
 
     const { isPending, error, data } = useQuery({
@@ -58,6 +62,9 @@ function ProductDetail() {
                             ))}
                         </>
                     )}
+                    <button onClick={() => {
+                        addToCart(data)
+                    }}>Add to cart</button>
                   </div>
                 </>
             )}
