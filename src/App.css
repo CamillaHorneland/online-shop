@@ -3,6 +3,26 @@
   text-align: center;
 }
 
+.search-input {
+  margin: 30px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid #555;
+  }
+
+  &:focus {
+    border: 2px solid #797b7c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(184, 184, 185, 0.5);
+  }
+      
+}
+
 .flex-card {
   margin: 2px;
   display: flex;

@@ -14,19 +14,21 @@ h1 {
 }
 
 button {
-  background-color: #666768;
+  background-color: #797a7b;
   color: #fff;
   padding: 10px 15px;
   cursor: pointer;
-}
 
-button:hover {
-  border-color: #9b9b9e;
+    &:hover {
+        border: 1px solid #6d6868;
+      }
+    
+      &:focus {
+        border: 2px solid #b1b2b3;
+        outline: none;
+        box-shadow: 0 0 5px rgba(204, 204, 213, 0.5);
+      }
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto;
-} 
 
 main {
   min-height: 80vh;
