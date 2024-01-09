@@ -1,6 +1,6 @@
 import { useLocalStorage } from "../../../hooks/LocaleStorage";
 import { CiShoppingCart } from "react-icons/ci";
-import { useEffect, useState, useContext } from 'react';
+import { useContext } from 'react';
 import { CartContext } from "../../../hooks/CartProvider";
 
 const Cart = () => {

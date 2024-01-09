@@ -1,0 +1,38 @@
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formLabel {
+    margin-bottom: 8px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.formTextarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.formButton {
+    background-color: #666768;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+    .formInput,
+    .formTextarea {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+    }
+}

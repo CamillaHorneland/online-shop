@@ -1,5 +1,5 @@
 import React from 'react';
-import GoCart from '../components/layout/cart/GoCart';
+import GoCart from '../components/cart/GoCart';
 
 function CartPage() {
   return (
