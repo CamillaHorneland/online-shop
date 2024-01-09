@@ -34,6 +34,15 @@ li {
     margin-right: 25px;
 }
 
+.cartImage {
+    width: 40px;
+}
+
+button {
+    margin: 30px;
+    margin-bottom: 50px;
+}
+
 @media (max-width: 800px) {
 
     .cartItem {
