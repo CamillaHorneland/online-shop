@@ -1,16 +1,20 @@
+# The OnlineStore
+
 This is my Course Assignment for Front-end Frameworks.
 
-# Goal
+<img width="900" alt="Skjermbilde 2024-01-10 kl  00 05 32" src="https://github.com/CamillaHorneland/online-shop/assets/104870685/7d5ffeaf-eda6-45d4-b3bc-0c9f92408b4a">
+
+## Goal
 
 To apply knowledge of React to build an eCom store.
 
-## Brief
+### Brief
 
 The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
 
 You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
 
-## You are tasked with build out the following pages for an eCom store:
+### You are tasked with build out the following pages for an eCom store:
 
     Homepage
     Individual product page
@@ -42,7 +46,7 @@ You are not required to use TypeScript.
 
 Your code is expected to be clean and well-formatted.
 
-## Process
+### Process
 
     1 Create a new CRA app.
     2 Create a Header that has a Nav.
@@ -73,10 +77,39 @@ Your code is expected to be clean and well-formatted.
     18 console.log the data from the form once validation requirements are met.
     19 Once your project is done, deploy it to Netlify.
 
-## Delivery
+### Delivery
 
 Deploy your website on Netlify.
 
 Please submit your public GitHub repository URL and the URL for your Netlify live site.
 
     Please make sure to exclude node_modules by using a .gitignore file.
+
+## Built with
+
+- React + Vite
+- Noroff API
+- CSS Modules.
+
+## Deployed with Netlify
+
+https://xtheonlinestorex.netlify.app/
+
+## Getting Started
+
+### Clone repo:
+
+https://github.com/CamillaHorneland/online-shop.git
+
+### Install
+To run the app, run the following commands:
+
+    npm i
+
+Build
+
+    npm run dev
+
+
+
+
