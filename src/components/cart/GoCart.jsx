@@ -30,14 +30,18 @@ function GoCart() {
   };
 
   const addProduct = (product) => {
-    const cart = addToCart(product);
-    setCartProducts(cart.products);
-  };
+  const updatedCart = addToCart(product);
+  if (updatedCart) {
+    setCartProducts(updatedCart.products);
+  }
+};
 
-  const removeProduct = (product) => {
-    const cart = removeFromCart(product);
-    setCartProducts(cart.products);
-  };
+const removeProduct = (product) => {
+  const updatedCart = removeFromCart(product);
+  if (updatedCart) {
+    setCartProducts(updatedCart.products);
+  }
+};
 
   const formatPrice = (price) => {
     return parseFloat(price).toFixed(2);

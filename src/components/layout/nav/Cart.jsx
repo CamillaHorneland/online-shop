@@ -14,15 +14,12 @@ const Cart = () => {
 const CartIcon = ({ children }) => {
   const { quantity, clearCart } = useContext(CartContext);
 
-  const handleCartIconClick = () => {
-    clearCart();
-  };
 
   useEffect(() => {
   }, [quantity]);
 
   return (
-    <span className="cartIcon" onClick={handleCartIconClick}>
+    <span className="cartIcon" >
       {children}
       <CiShoppingCart style={{ fontSize: '30px' }} />
       <i>{quantity}</i>
