@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "./Nav.module.css";
 import Logo from "./Logo";
@@ -24,14 +24,14 @@ const Nav = () => {
             Home
           </NavLink>
         </li>
-         <li>
+        <li>
           <NavLink to="/checkout" className="active" onClick={() => { setIsMobileMenuOpen(false);
               navigate('/checkout', { replace: true });
               window.location.reload();}}>
             Checkout
           </NavLink>
         </li>
-         <li>
+        <li>
           <NavLink to="/cart" className="active" onClick={() => { setIsMobileMenuOpen(false);
             navigate('/cart', { replace: true });
               window.location.reload();}}>
@@ -49,4 +49,5 @@ const Nav = () => {
 };
 
 export default Nav;
+
 
