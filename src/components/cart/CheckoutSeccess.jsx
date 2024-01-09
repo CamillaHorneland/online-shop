@@ -17,7 +17,7 @@ function CheckoutSuccess({ orderDetails }) {
     <div className={styles.successContainer}>
         <h2>Order Successful!</h2>
         <p>Your order details will be sendt by mail</p>
-        <p>Invoice will be sent by email.</p>
+        <p>Invoice will be sent by mail when we send your order.</p>
         <button onClick={handleContinueShopping}>Continue Shopping</button>
     </div>
   );
