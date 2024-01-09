@@ -1,8 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { CartContext } from '../../../hooks/CartProvider';
+import { CartContext } from '../../hooks/CartProvider';
 import styles from "./GoCart.module.css"
+import { useNavigate } from "react-router-dom";
 
 function GoCart() {
+  const navigate = useNavigate();
   const { quantity, addToCart, removeFromCart, getCartProducts } = useContext(CartContext);
   const [cartProducts, setCartProducts] = useState(getCartProducts());
   const [totalPrice, setTotalPrice] = useState(0);
@@ -65,14 +67,19 @@ function GoCart() {
         })}
       </ul>
       <div className={styles.totalInfo}>
-        <h5>Total pris: {formatPrice(totalPrice)}</h5>
-        <h5>Total rabatt: {formatPrice(totalDiscountedPrice)}</h5>
+        <h5>Total price: {formatPrice(totalPrice)}</h5>
+        <h5>Total discount: {formatPrice(totalDiscountedPrice)}</h5>
       </div>
+      <button onClick={() => { 
+        navigate(`/checkout`);
+        window.location.reload();}}
+        ><a>Go to checkout..</a>
+      </button>
     </>
   );
 }
 
-export default GoCart;
+export default GoCart; 
 
           
 

@@ -27,3 +27,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto;
 } 
+
+main {
+  min-height: 80vh;
+}

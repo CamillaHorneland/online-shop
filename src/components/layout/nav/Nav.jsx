@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "./Nav.module.css";
 import Logo from "./Logo";
 import { CartIcon } from "./Cart";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleToggleMobileMenu = () => {
@@ -24,18 +25,24 @@ const Nav = () => {
           </NavLink>
         </li>
          <li>
-          <NavLink to="/checkout" className="active" onClick={() => setIsMobileMenuOpen(false)}>
+          <NavLink to="/checkout" className="active" onClick={() => { setIsMobileMenuOpen(false);
+              navigate('/checkout', { replace: true });
+              window.location.reload();}}>
             Checkout
           </NavLink>
         </li>
          <li>
-          <NavLink to="/cart" className="active" onClick={() => setIsMobileMenuOpen(false)}>
+          <NavLink to="/cart" className="active" onClick={() => { setIsMobileMenuOpen(false);
+            navigate('/cart', { replace: true });
+              window.location.reload();}}>
             Cart
           </NavLink>
         </li>
       </ul>
-      <NavLink to="/cart" className={`active ${styles.cartLink}`} onClick={() => setIsMobileMenuOpen(false)}>
-        <CartIcon />
+      <NavLink to="/cart" className="active" onClick={() => { setIsMobileMenuOpen(false);
+            navigate('/cart', { replace: true });
+              window.location.reload();}}>
+          <CartIcon />
       </NavLink>
     </nav>
   );

@@ -1,4 +1,4 @@
-import { createContext, useState} from 'react';
+import { createContext, useState, useEffect} from 'react';
 import { getStorageValue, useLocalStorage } from './LocaleStorage';
 
 export const CartContext = createContext({
@@ -34,30 +34,34 @@ console.log(newCart);
   return newCart;
 }
 
-export default function CartProvider({children}) {
-    const initialCart = getStorageValue('cart');
-    const [cart, changeCart] = useLocalStorage('cart', { products: [] });
-    const [quantity, setQuantity] = useState(initialCart?.products?.length || 0);
-  
+
+
+export default function CartProvider({ children }) {
+  const initialCart = getStorageValue('cart', { products: [] });
+  const [cart, setCart] = useLocalStorage('cart', initialCart);
+  const [quantity, setQuantity] = useState(cart.products.length || 0);
+
   const addToCart = (product) => {
     const updatedCart = _addToCart(product);
-    setQuantity(updatedCart.products.length);
-    return updatedCart;
+    setCart(updatedCart);
   };
 
   const removeFromCart = (product) => {
     const updatedCart = _removeFromCart(product);
-    setQuantity(updatedCart.products.length);
-    return updatedCart;
-  }
+    setCart(updatedCart);
+  };
 
   const getCartProducts = () => {
     return cart.products;
-  }
-  
+  };
+
+  useEffect(() => {
+    setQuantity(cart.products.length);
+  }, [cart.products]);
+
   return (
     <CartContext.Provider value={{ quantity, addToCart, removeFromCart, getCartProducts }}>
       {children}
     </CartContext.Provider>
   );
-} 
+}
