@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../hooks/CartProvider';
 import styles from "./GoCart.module.css"; 
-import { useNavigate } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutSuccess from './CheckoutSeccess';
 
 function GoCheckout() {
-  const { getCartProducts } = useContext(CartContext);
+  const { removeFromCart, clearCart, getCartProducts } = useContext(CartContext);
   const [cartProducts, setCartProducts] = useState(getCartProducts());
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0);
@@ -43,12 +43,12 @@ function GoCheckout() {
   const isCartEmpty = cartProducts.length === 0;
 
   const onFormSubmit = () => {
-  
-  removeFromCart();
-  localStorage.removeItem('cartProducts');
-  localStorage.removeItem('totalPrice');
-  setOrderCompleted(true);
-
+    clearCart();
+    removeFromCart({});
+    localStorage.removeItem('cartProducts');
+    localStorage.removeItem('totalPrice');
+    setOrderCompleted(true);
+    navigate('/checkout-success');
 };
 
   return (

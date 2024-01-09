@@ -1,6 +1,6 @@
+import { useEffect, useContext } from 'react';
 import { useLocalStorage } from "../../../hooks/LocaleStorage";
 import { CiShoppingCart } from "react-icons/ci";
-import { useContext } from 'react';
 import { CartContext } from "../../../hooks/CartProvider";
 
 const Cart = () => {
@@ -11,18 +11,23 @@ const Cart = () => {
     )
 };
 
-const CartIcon = ({children}) => {
-    const { quantity, addToCart } = useContext(CartContext);
+const CartIcon = ({ children }) => {
+  const { quantity, clearCart } = useContext(CartContext);
 
-    return (
-        <span className="cartIcon">
-            { children }
-            <CiShoppingCart style={{fontSize: '30px'}} />
-            <i>{quantity}</i>
-        </span>
-    )
+  const handleCartIconClick = () => {
+    clearCart();
+  };
+
+  useEffect(() => {
+  }, [quantity]);
+
+  return (
+    <span className="cartIcon" onClick={handleCartIconClick}>
+      {children}
+      <CiShoppingCart style={{ fontSize: '30px' }} />
+      <i>{quantity}</i>
+    </span>
+  );
 };
-
-
 
 export { Cart, CartIcon };
