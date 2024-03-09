@@ -4,15 +4,17 @@ This is my Course Assignment for Front-end Frameworks.
 
 <img width="900" alt="Skjermbilde 2024-01-10 kl  00 05 32" src="https://github.com/CamillaHorneland/online-shop/assets/104870685/7d5ffeaf-eda6-45d4-b3bc-0c9f92408b4a">
 
-## Goal
+## Description
+
+### Goal
 
 To apply knowledge of React to build an eCom store.
 
-### Brief
+#### Brief
 
-The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
+  - The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
 
-You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
+  - You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1  /online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
 
 ### You are tasked with build out the following pages for an eCom store:
 
@@ -85,13 +87,13 @@ Please submit your public GitHub repository URL and the URL for your Netlify liv
 
     Please make sure to exclude node_modules by using a .gitignore file.
 
-## Built with
+### Built with
 
 - React + Vite
 - Noroff API
 - CSS Modules.
 
-## Deployed with Netlify
+### Deployed with Netlify
 
 https://xtheonlinestorex.netlify.app/
 
@@ -101,14 +103,44 @@ https://xtheonlinestorex.netlify.app/
 
 https://github.com/CamillaHorneland/online-shop.git
 
-### Install
-To run the app, run the following commands:
+2.Install NPM packages/dependencies
 
-    npm i
+    cd online-shop
+    npm install
 
-Build
+3.Start the project
 
-    npm run dev
+    npm start
+
+### Development
+
+To start the development server with Vite, run:
+
+      npm run dev
+    
+## Contributing
+This project is for academic purposes only, and therefore, contributions are not permitted.
+
+### Contact
+
+<a href="mailto:hornikkene@gmail.com?">My Mail</a> 
+
+<a href="https://camilla-horneland-portfolio.netlify.app/">My Portfolio</a>
+
+<a href="https://www.linkedin.com/in/camilla-horneland-706bb5239/">My LinkedIn page</a>    
+   
+### Acknowledgments
+
+    Noroff - School of technology and digital media
+    Bootstrap documentation
+    SASS documentation
+    ChatGPT
+    Noroff API
+
+### Badges
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9043d63f-6aec-4a99-9d87-5f6626601ca7/deploy-status)](https://app.netlify.com/sites/xtheonlinestorex/deploys)
+
 
 
 
